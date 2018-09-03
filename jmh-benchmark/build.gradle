@@ -1,0 +1,12 @@
+jmh {
+    include = ".+SingleShot.*"
+}
+
+dependencies {
+    jmh project(":jmh-utils")
+    
+	jmh "commons-io:commons-io:2.6"
+	jmh "org.simpleflatmapper:lightning-csv:4.0.1"
+    
+}
+

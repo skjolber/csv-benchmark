@@ -1,0 +1,26 @@
+dependencies {
+
+	compile "com.univocity:univocity-parsers:2.7.3"
+	compile "org.csveed:csveed:0.5.0"
+	compile "org.apache.commons:commons-csv:1.5"
+	compile "net.sf.flatpack:flatpack:4.0.2"
+	compile "net.sf.supercsv:super-csv:2.4.0"
+	compile "com.googlecode.jcsv:jcsv:1.4.0"
+	compile "net.sourceforge.javacsv:javacsv:2.0"
+	compile "com.espertech:esperio-csv:7.1.0"
+	compile "br.com.objectos:way-io:2.1.0"
+	compile "com.opencsv:opencsv:4.2"
+	compile "genjava:gj-csv:1.0"
+	compile "net.quux00.simplecsv:simplecsv:2.1"
+	compile "org.jdom:jdom:2.0.2"
+	compile "org.beanio:beanio:2.1.0"
+	compile "com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.9.6"
+	compile "com.fasterxml.jackson.core:jackson-core:2.9.6"
+	compile "org.simpleflatmapper:sfm-csv:3.19.0"
+	compile "org.ostermiller:utils:1.07.00"
+	compile "com.github.marklister:product-collections_2.11:1.4.5"
+    compile "com.github.skjolber.csv-databind:csv-databind:1.0.0-SNAPSHOT"
+    
+    
+}
+
