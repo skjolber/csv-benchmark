@@ -49,7 +49,7 @@ Modes:
 
 # Results
 
-  * Single-shot [1](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html), [100](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html), [1000](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html), [100000](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html), [500000](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html), [1000000](https://skjolber.github.io/csv-benchmark/docs/single-shot-1/index.html)
+  * Single-shot [1](https://skjolber.github.io/csv-benchmark/single-shot-1/index.html), [100](https://skjolber.github.io/csv-benchmark/single-shot-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/single-shot-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/single-shot-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/single-shot-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/single-shot-1000000/index.html)
   * Sample time: 
 
 # History
