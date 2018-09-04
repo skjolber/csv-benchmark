@@ -1,0 +1,628 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsTrips.csvDatabind",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 42.251308,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 42.251308,
+                "50.0" : 42.251308,
+                "90.0" : 42.251308,
+                "95.0" : 42.251308,
+                "99.0" : 42.251308,
+                "99.9" : 42.251308,
+                "99.99" : 42.251308,
+                "99.999" : 42.251308,
+                "99.9999" : 42.251308,
+                "100.0" : 42.251308
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    42.251308
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsTrips.simpleFlatMapper",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 224.87716,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 224.87716,
+                "50.0" : 224.87716,
+                "90.0" : 224.87716,
+                "95.0" : 224.87716,
+                "99.0" : 224.87716,
+                "99.9" : 224.87716,
+                "99.99" : 224.87716,
+                "99.999" : 224.87716,
+                "99.9999" : 224.87716,
+                "100.0" : 224.87716
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    224.87716
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsTrips.univocity",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 126.082541,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 126.082541,
+                "50.0" : 126.082541,
+                "90.0" : 126.082541,
+                "95.0" : 126.082541,
+                "99.0" : 126.082541,
+                "99.9" : 126.082541,
+                "99.99" : 126.082541,
+                "99.999" : 126.082541,
+                "99.9999" : 126.082541,
+                "100.0" : 126.082541
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    126.082541
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotQuotedGtfsTrips.csvDatabind",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 92.457906,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 92.457906,
+                "50.0" : 92.457906,
+                "90.0" : 92.457906,
+                "95.0" : 92.457906,
+                "99.0" : 92.457906,
+                "99.9" : 92.457906,
+                "99.99" : 92.457906,
+                "99.999" : 92.457906,
+                "99.9999" : 92.457906,
+                "100.0" : 92.457906
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    92.457906
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotQuotedGtfsTrips.simpleFlatMapper",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 232.209605,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 232.209605,
+                "50.0" : 232.209605,
+                "90.0" : 232.209605,
+                "95.0" : 232.209605,
+                "99.0" : 232.209605,
+                "99.9" : 232.209605,
+                "99.99" : 232.209605,
+                "99.999" : 232.209605,
+                "99.9999" : 232.209605,
+                "100.0" : 232.209605
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    232.209605
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotQuotedGtfsTrips.univocity",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 135.388456,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 135.388456,
+                "50.0" : 135.388456,
+                "90.0" : 135.388456,
+                "95.0" : 135.388456,
+                "99.0" : 135.388456,
+                "99.9" : 135.388456,
+                "99.99" : 135.388456,
+                "99.999" : 135.388456,
+                "99.9999" : 135.388456,
+                "100.0" : 135.388456
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    135.388456
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCities.csvDatabind",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 99.167153,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 99.167153,
+                "50.0" : 99.167153,
+                "90.0" : 99.167153,
+                "95.0" : 99.167153,
+                "99.0" : 99.167153,
+                "99.9" : 99.167153,
+                "99.99" : 99.167153,
+                "99.999" : 99.167153,
+                "99.9999" : 99.167153,
+                "100.0" : 99.167153
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    99.167153
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCities.simpleFlatMapper",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 171.968508,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 171.968508,
+                "50.0" : 171.968508,
+                "90.0" : 171.968508,
+                "95.0" : 171.968508,
+                "99.0" : 171.968508,
+                "99.9" : 171.968508,
+                "99.99" : 171.968508,
+                "99.999" : 171.968508,
+                "99.9999" : 171.968508,
+                "100.0" : 171.968508
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    171.968508
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCities.univocity",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 192.703936,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 192.703936,
+                "50.0" : 192.703936,
+                "90.0" : 192.703936,
+                "95.0" : 192.703936,
+                "99.0" : 192.703936,
+                "99.9" : 192.703936,
+                "99.99" : 192.703936,
+                "99.999" : 192.703936,
+                "99.9999" : 192.703936,
+                "100.0" : 192.703936
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    192.703936
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCitiesQuotes.csvDatabind",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 118.541693,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 118.541693,
+                "50.0" : 118.541693,
+                "90.0" : 118.541693,
+                "95.0" : 118.541693,
+                "99.0" : 118.541693,
+                "99.9" : 118.541693,
+                "99.99" : 118.541693,
+                "99.999" : 118.541693,
+                "99.9999" : 118.541693,
+                "100.0" : 118.541693
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    118.541693
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCitiesQuotes.simpleFlatMapper",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 185.342622,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 185.342622,
+                "50.0" : 185.342622,
+                "90.0" : 185.342622,
+                "95.0" : 185.342622,
+                "99.0" : 185.342622,
+                "99.9" : 185.342622,
+                "99.99" : 185.342622,
+                "99.999" : 185.342622,
+                "99.9999" : 185.342622,
+                "100.0" : 185.342622
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    185.342622
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotWorldCitiesQuotes.univocity",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC",
+            "-Xverify:none"
+        ],
+        "jdkVersion" : "1.8.0_172",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.172-b11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 225.695367,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 225.695367,
+                "50.0" : 225.695367,
+                "90.0" : 225.695367,
+                "95.0" : 225.695367,
+                "99.0" : 225.695367,
+                "99.9" : 225.695367,
+                "99.99" : 225.695367,
+                "99.999" : 225.695367,
+                "99.9999" : 225.695367,
+                "100.0" : 225.695367
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    225.695367
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
