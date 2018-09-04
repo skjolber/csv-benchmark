@@ -1,11 +1,12 @@
 # csv-benchmark
-Project for benchmarking popular high-performance open source CSV parsers using [JMH].
+Project for benchmarking high-performance open source CSV parsers using [JMH].
 
   * [SimpleFlatMapper]
   * [univocity-parsers]
   * [sesseltjonna-csv]
 
 Bugs, feature suggestions and help requests can be filed with the [issue-tracker].
+
 ## License
 [Apache 2.0]
 
@@ -60,9 +61,7 @@ The results show that the [SimpleFlatMapper] seems to excel at World Cities whil
 ### Sample time
 What is measured here is the __warm start__, which is how long the parsing takes after an initial warmup. The warmup here referes to the Just-in-time-compilator to do its optimizations, which takes place after something like a second of back to back invocation of the code. Basically these optimizations usually mean inlining methods and compiling the bytecode to platform-specific code.
 
-The results [1](https://skjolber.github.io/csv-benchmark/sample-time-1/index.html), [100](https://skjolber.github.io/csv-benchmark/sample-time-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/sample-time-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/sample-time-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/sample-time-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/sample-time-1000000/index.html)
-
-show that [SimpleFlatMapper] actually is faster for very small documents, but as size grows, [sesseltjonna-csv] performs best for both inputs.
+The results [1](https://skjolber.github.io/csv-benchmark/sample-time-1/index.html), [100](https://skjolber.github.io/csv-benchmark/sample-time-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/sample-time-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/sample-time-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/sample-time-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/sample-time-1000000/index.html) show that [SimpleFlatMapper] actually is faster for very small documents, but as size grows, [sesseltjonna-csv] performs best for both inputs.
 
 # History
 
