@@ -55,7 +55,7 @@ public abstract class AbstractCsvParserBenchmark<T> {
     }
 
     @Benchmark
-    public void csvDatabind(Blackhole blackhole, CsvParam csvParam) throws Exception {
+    public void sesseltjonnaCsv(Blackhole blackhole, CsvParam csvParam) throws Exception {
     	Reader reader = getReader(csvParam);
     	try {
 			CsvClassFactory<T> factory;

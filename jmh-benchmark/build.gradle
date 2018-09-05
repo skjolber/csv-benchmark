@@ -1,4 +1,5 @@
 jmh {
+    //include = ".+singleshot.*"
     include = ".+sampletime.*"
 }
 

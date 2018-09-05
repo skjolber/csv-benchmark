@@ -7,7 +7,7 @@ import com.github.skjolber.csv.scan.CsvClassMapping;
 public abstract class AbstractCityCsvParserBenchmark extends AbstractCsvParserBenchmark<City> {
 	
 	@Setup
-	public void setCsvDatabind() throws Exception {
+	public void setupSesseltjonnaCsv() throws Exception {
 		plain = CsvClassMapping.builder(City.class)
 				.stringField("Country")
 					.required()
@@ -16,7 +16,6 @@ public abstract class AbstractCityCsvParserBenchmark extends AbstractCsvParserBe
 				.stringField("AccentCity")
 					.required()
 				.stringField("Region")
-					.quoted()
 					.optional()
 				.longField("Population")
 					.optional()

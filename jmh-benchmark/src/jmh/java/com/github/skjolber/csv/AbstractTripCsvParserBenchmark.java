@@ -7,7 +7,7 @@ import com.github.skjolber.csv.scan.CsvClassMapping;
 public abstract class AbstractTripCsvParserBenchmark extends AbstractCsvParserBenchmark<Trip> {
 	
 	@Setup
-	public void setCsvDatabind() throws Exception {
+	public void setupSesseltjonnaCsv() throws Exception {
 		
 		plain = CsvClassMapping.builder(Trip.class)
 			.stringField("route_id")
@@ -21,7 +21,6 @@ public abstract class AbstractTripCsvParserBenchmark extends AbstractCsvParserBe
 				.required()
 			.stringField("trip_headsign")
 				.setter(Trip::setTripHeadsign)
-				.quoted()
 				.optional()
 			.integerField("direction_id")
 				.setter(Trip::setDirectionId)
