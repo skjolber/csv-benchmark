@@ -2,7 +2,7 @@ package com.github.skjolber.csv;
 
 import org.openjdk.jmh.annotations.Setup;
 
-import com.github.skjolber.csv.scan.CsvClassMapping;
+import com.github.skjolber.stcsv.CsvClassMapping;
 
 public abstract class AbstractCityCsvParserBenchmark extends AbstractCsvParserBenchmark<City> {
 	
