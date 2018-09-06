@@ -63,6 +63,16 @@ What is measured here is the __warm start__, which is how long the parsing takes
 
 The results [1](https://skjolber.github.io/csv-benchmark/sample-time-1/index.html), [100](https://skjolber.github.io/csv-benchmark/sample-time-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/sample-time-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/sample-time-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/sample-time-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/sample-time-1000000/index.html) show that [SimpleFlatMapper] actually is faster for very small documents, but as size grows, [sesseltjonna-csv] performs best for both inputs.
 
+### Bootstrap time
+
+Just a note on using this library to minimize startup time - your milage will vary in relation to the above benchmark because you also have to take into account the time loading the dependency libraries - indeed this is true for all the CSV parser libraries. 
+
+For sesseltjonna-csv, when using explicit `setter`, it loads the byte-buddy library to identify the setter method, whereas the default is to use reflection.
+
+If however the CSV format is written in stone, it is possible to add the dynamically generated parser as regular class during build-time. 
+
+So as with all optimization, make sure to measure the startup time before and after modifications.
+
 # History
 
  - 1.0.0: Initial version
