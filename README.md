@@ -63,6 +63,8 @@ What is measured here is the __warm start__, which is how long the parsing takes
 
 The results [1](https://skjolber.github.io/csv-benchmark/sample-time-1/index.html), [100](https://skjolber.github.io/csv-benchmark/sample-time-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/sample-time-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/sample-time-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/sample-time-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/sample-time-1000000/index.html) show that [SimpleFlatMapper] actually is faster for very small documents, but as size grows, [sesseltjonna-csv] performs best for both inputs.
 
+Below 1000 rows takes under a millisecond for all libraries, 1 million rows takes between 150 and 900 milliseconds: [10000-1000000](https://skjolber.github.io/csv-benchmark/sample-time/index.html)
+
 ### Bootstrap time
 
 Just a note on using this library to minimize startup time - your milage will vary in relation to the above benchmark because you also have to take into account the time loading the dependency libraries - indeed this is true for all the CSV parser libraries. 
