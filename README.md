@@ -77,6 +77,12 @@ If however the CSV format is written in stone, it is possible to add the dynamic
 
 So as with all optimization, make sure to measure the startup time before and after modifications.
 
+# Links
+Alternative benchmarks
+
+  * [csv-parsers-comparison](https://github.com/uniVocity/csv-parsers-comparison)
+  * [simpleflatmapper benchmarks](http://simpleflatmapper.org/12-csv-performance.html)
+ 
 # History
 
  - 1.0.0: Initial version
