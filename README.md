@@ -49,14 +49,16 @@ Modes:
   * single-shot and sample time   
 
 # Results
-
+From using JDK 8.
 
 ### Single-shot
 What is measured is the __cold start__, which is how long the parsing take the first time. This does not however include things like class-loading, only whatever configuration can be done ahead of being passed a Reader. 
 
 The results [1](https://skjolber.github.io/csv-benchmark/single-shot-1/index.html), [100](https://skjolber.github.io/csv-benchmark/single-shot-100/index.html), [1000](https://skjolber.github.io/csv-benchmark/single-shot-1000/index.html), [100000](https://skjolber.github.io/csv-benchmark/single-shot-100000/index.html), [500000](https://skjolber.github.io/csv-benchmark/single-shot-500000/index.html), [1000000](https://skjolber.github.io/csv-benchmark/single-shot-1000000/index.html) must be taken with a grain of salt. Most of these will differ quite a lot from run to run, but the current results give a ballpark picture of the performance.
 
-The results show that the [SimpleFlatMapper] seems to excel at World Cities while the [univocity-parsers] excel at GTFS Trips. However [sesseltjonna-csv] performs best for both inputs. 
+The results show that the [SimpleFlatMapper] seems to excel at World Cities while the [univocity-parsers] excel at GTFS Trips. However [sesseltjonna-csv] performs better for both inputs. 
+
+When parsing a lot of different CSV file formats, libraries using the same parser will probably have an advantage on the JIT side as there will be fewer files to compile and thus more of the overall time will be spent running JIT-optimized code paths.
 
 ### Sample time
 What is measured here is the __warm start__, which is how long the parsing takes after an initial warmup. The warmup here referes to the Just-in-time-compilator to do its optimizations, which takes place after something like a second of back to back invocation of the code. Basically these optimizations usually mean inlining methods and compiling the bytecode to platform-specific code.

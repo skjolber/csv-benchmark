@@ -1,6 +1,7 @@
 jmh {
     //include = ".+singleshot.*"
     include = ".+sampletime.*"
+    //include = ".+StopTime.*"
 }
 
 dependencies {

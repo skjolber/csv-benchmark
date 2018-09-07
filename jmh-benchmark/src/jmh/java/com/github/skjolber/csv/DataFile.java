@@ -8,7 +8,9 @@ public enum DataFile {
 	WORLD_CITIES(City.class, "worldcitiespop.zip", false, StandardCharsets.UTF_8),
 	WORLD_CITIES_WITH_QUOTES(City.class, "worldcitiespop.zip", true, StandardCharsets.UTF_8),
 	GTFS_TRIP(Trip.class, "trips.zip", false, StandardCharsets.UTF_8),
-	GTFS_TRIP_WITH_QUOTES(Trip.class, "trips.zip", true, StandardCharsets.UTF_8);
+	GTFS_TRIP_WITH_QUOTES(Trip.class, "trips.zip", true, StandardCharsets.UTF_8),
+	GTFS_STOPTIME(StopTime.class, "stoptimes.zip", false, StandardCharsets.UTF_8),
+	GTFS_STOPTIME_WITH_QUOTES(StopTime.class, "stoptimes.zip", true, StandardCharsets.UTF_8);
 	
 	private Class<?> cls;
 	private String inputFile;
