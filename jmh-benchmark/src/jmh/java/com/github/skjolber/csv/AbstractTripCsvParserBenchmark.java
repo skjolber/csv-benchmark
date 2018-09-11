@@ -2,7 +2,7 @@ package com.github.skjolber.csv;
 
 import org.openjdk.jmh.annotations.Setup;
 
-import com.github.skjolber.stcsv.CsvClassMapping;
+import com.github.skjolber.stcsv.CsvMapper;
 
 
 public abstract class AbstractTripCsvParserBenchmark extends AbstractCsvParserBenchmark<Trip> {
@@ -10,7 +10,7 @@ public abstract class AbstractTripCsvParserBenchmark extends AbstractCsvParserBe
 	@Setup
 	public void setupSesseltjonnaCsv() throws Exception {
 		
-		plain = CsvClassMapping.builder(Trip.class)
+		plain = CsvMapper.builder(Trip.class)
 			.stringField("route_id")
 				.setter(Trip::setRouteId)
 				.required()
@@ -34,7 +34,7 @@ public abstract class AbstractTripCsvParserBenchmark extends AbstractCsvParserBe
 				.optional()
 			.build();
 		
-		quotes = CsvClassMapping.builder(Trip.class)
+		quotes = CsvMapper.builder(Trip.class)
 				.stringField("route_id")
 					.setter(Trip::setRouteId)
 					.quoted()

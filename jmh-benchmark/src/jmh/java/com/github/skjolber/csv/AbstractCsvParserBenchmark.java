@@ -15,16 +15,14 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.github.skjolber.csv.param.CsvParam;
-import com.github.skjolber.stcsv.CsvClassFactory;
-import com.github.skjolber.stcsv.CsvClassMapping;
 import com.univocity.parsers.common.ParsingContext;
 import com.univocity.parsers.common.processor.BeanProcessor;
 import com.univocity.parsers.csv.CsvParserSettings;
 
 public abstract class AbstractCsvParserBenchmark<T> {
 	
-	protected CsvClassMapping<T> plain;
-	protected CsvClassMapping<T> quotes;
+	protected com.github.skjolber.stcsv.CsvMapper<T> plain;
+	protected com.github.skjolber.stcsv.CsvMapper<T> quotes;
 	
 	protected CsvParser.DSL dsl;
 	protected CsvParser.MapToDSL<T> mapToDSL;
@@ -58,7 +56,7 @@ public abstract class AbstractCsvParserBenchmark<T> {
     public void sesseltjonnaCsv(Blackhole blackhole, CsvParam csvParam) throws Exception {
     	Reader reader = getReader(csvParam);
     	try {
-			CsvClassFactory<T> factory;
+    		com.github.skjolber.stcsv.CsvReader<T> factory;
 			if(!dataFile.isQuotes()) {
 				factory = plain.create(reader);
 			} else {

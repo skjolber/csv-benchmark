@@ -3,15 +3,14 @@ package com.github.skjolber.csv;
 import org.openjdk.jmh.annotations.Setup;
 
 import com.github.skjolber.csv.util.StopTimeFieldMappingFactory;
-import com.github.skjolber.stcsv.CsvClassMapping;
-
+import com.github.skjolber.stcsv.CsvMapper;
 
 public abstract class AbstractStopTimeCsvParserBenchmark extends AbstractCsvParserBenchmark<StopTime> {
 	
 	@Setup
 	public void setupSesseltjonnaCsv() throws Exception {
 		
-		plain = CsvClassMapping.builder(StopTime.class)
+		plain = CsvMapper.builder(StopTime.class)
 			.stringField("stop_id")
 				.required()
 			.stringField("trip_id")
@@ -40,7 +39,7 @@ public abstract class AbstractStopTimeCsvParserBenchmark extends AbstractCsvPars
 				.optional()
 			.build();
 		
-		quotes = CsvClassMapping.builder(StopTime.class)
+		quotes = CsvMapper.builder(StopTime.class)
 				.stringField("stop_id")
 					.quoted()
 					.required()

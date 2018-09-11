@@ -2,13 +2,13 @@ package com.github.skjolber.csv;
 
 import org.openjdk.jmh.annotations.Setup;
 
-import com.github.skjolber.stcsv.CsvClassMapping;
+import com.github.skjolber.stcsv.CsvMapper;
 
 public abstract class AbstractCityCsvParserBenchmark extends AbstractCsvParserBenchmark<City> {
 	
 	@Setup
 	public void setupSesseltjonnaCsv() throws Exception {
-		plain = CsvClassMapping.builder(City.class)
+		plain = CsvMapper.builder(City.class)
 				.stringField("Country")
 					.required()
 				.stringField("City")
@@ -25,7 +25,7 @@ public abstract class AbstractCityCsvParserBenchmark extends AbstractCsvParserBe
 					.optional()
 				.build();
 		
-		quotes = CsvClassMapping.builder(City.class)
+		quotes = CsvMapper.builder(City.class)
 				.stringField("Country")
 					.quoted()
 					.required()
