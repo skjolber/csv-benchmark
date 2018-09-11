@@ -19,7 +19,7 @@ dependencies {
 	compile "org.simpleflatmapper:sfm-csv:3.19.0"
 	compile "org.ostermiller:utils:1.07.00"
 	compile "com.github.marklister:product-collections_2.11:1.4.5"
-    compile "com.github.skjolber.sesseltjonna-csv:sesseltjonna-csv:1.0.0-SNAPSHOT"
+    compile "com.github.skjolber.sesseltjonna-csv:sesseltjonna-csv:1.0.0"
     
     
 }
