@@ -41,14 +41,14 @@ public class CsvParam {
 	//@Param(value={"1", "10","1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
 	// @Param(value={"1", "10","100", "250", "500", "1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
 	//@Param(value={"1", "10","100", "250", "500", "1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
-	//@Param(value={"10000", "25000", "50000", "100000", "250000", "500000", "1000000"}) 
-	@Param(value={"1"})
+	@Param(value={"10000", "25000", "50000", "100000", "250000", "500000", "1000000"}) 
+	//@Param(value={"1000000"})
 	public int nbRows = 1;
 
 	public ExecutorService executorService;
 
-	protected static Map<File, char[]> characters = new ConcurrentHashMap<>();;
-	protected static Map<File, byte[]> bytes = new ConcurrentHashMap<>();;
+	protected final static Map<File, char[]> characters = new ConcurrentHashMap<>();;
+	protected final static Map<File, byte[]> bytes = new ConcurrentHashMap<>();;
 
 	@Setup
 	public void setUp() throws IOException {
@@ -108,7 +108,7 @@ public class CsvParam {
 					BufferedInputStream bis = new BufferedInputStream(zis);
 	
 					CsvParser.DSL dsl = CsvParser.dsl().quote('"');
-					org.simpleflatmapper.csv.CsvReader reader = dsl.reader(new InputStreamReader(bis, charset));
+					org.simpleflatmapper.lightningcsv.CsvReader reader = dsl.reader(new InputStreamReader(bis, charset));
 	
 					if(checkedConsumerWithCounter.getCount() > 0) {
 						reader.skipRows(1);

@@ -181,5 +181,83 @@ public class StopTime implements Serializable, Comparable<StopTime> {
 		this.departureTime = departureTime;
 	}
     
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((arrivalTime == null) ? 0 : arrivalTime.hashCode());
+		result = prime * result + ((departureTime == null) ? 0 : departureTime.hashCode());
+		result = prime * result + dropOffType;
+		result = prime * result + ((farePeriodId == null) ? 0 : farePeriodId.hashCode());
+		result = prime * result + pickupType;
+		result = prime * result + ((routeShortName == null) ? 0 : routeShortName.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(shapeDistTraveled);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((stopHeadsign == null) ? 0 : stopHeadsign.hashCode());
+		result = prime * result + ((stopId == null) ? 0 : stopId.hashCode());
+		result = prime * result + stopSequence;
+		result = prime * result + timepoint;
+		result = prime * result + ((tripId == null) ? 0 : tripId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		StopTime other = (StopTime) obj;
+		if (arrivalTime == null) {
+			if (other.arrivalTime != null)
+				return false;
+		} else if (!arrivalTime.equals(other.arrivalTime))
+			return false;
+		if (departureTime == null) {
+			if (other.departureTime != null)
+				return false;
+		} else if (!departureTime.equals(other.departureTime))
+			return false;
+		if (dropOffType != other.dropOffType)
+			return false;
+		if (farePeriodId == null) {
+			if (other.farePeriodId != null)
+				return false;
+		} else if (!farePeriodId.equals(other.farePeriodId))
+			return false;
+		if (pickupType != other.pickupType)
+			return false;
+		if (routeShortName == null) {
+			if (other.routeShortName != null)
+				return false;
+		} else if (!routeShortName.equals(other.routeShortName))
+			return false;
+		if (Double.doubleToLongBits(shapeDistTraveled) != Double.doubleToLongBits(other.shapeDistTraveled))
+			return false;
+		if (stopHeadsign == null) {
+			if (other.stopHeadsign != null)
+				return false;
+		} else if (!stopHeadsign.equals(other.stopHeadsign))
+			return false;
+		if (stopId == null) {
+			if (other.stopId != null)
+				return false;
+		} else if (!stopId.equals(other.stopId))
+			return false;
+		if (stopSequence != other.stopSequence)
+			return false;
+		if (timepoint != other.timepoint)
+			return false;
+		if (tripId == null) {
+			if (other.tripId != null)
+				return false;
+		} else if (!tripId.equals(other.tripId))
+			return false;
+		return true;
+	}
     
 }
