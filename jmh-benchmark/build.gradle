@@ -5,10 +5,6 @@ jmh {
 }
 
 dependencies {
-    jmh project(":jmh-utils")
-    
-	jmh "commons-io:commons-io:2.6"
-	jmh "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
-    
+    jmh project(":jmh-utils")    
 }
 

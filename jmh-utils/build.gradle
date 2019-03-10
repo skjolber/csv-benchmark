@@ -1,5 +1,7 @@
 dependencies {
 
+	compile "commons-io:commons-io:2.6"
+	compile "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
 	compile "com.univocity:univocity-parsers:${univocityVersion}"
 	compile "org.simpleflatmapper:sfm-csv:${simpleFlatMapperVersion}"
 	compile "com.github.skjolber.sesseltjonna-csv:sesseltjonna-csv:${sesselTjonnaVersion}"
