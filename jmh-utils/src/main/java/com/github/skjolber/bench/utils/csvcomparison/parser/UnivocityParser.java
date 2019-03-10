@@ -15,12 +15,13 @@
  ******************************************************************************/
 package com.github.skjolber.bench.utils.csvcomparison.parser;
 
-import java.io.*;
-import java.util.*;
+import java.io.Reader;
+import java.util.List;
 
-import com.univocity.parsers.common.*;
-import com.univocity.parsers.common.processor.*;
-import com.univocity.parsers.csv.*;
+import com.univocity.parsers.common.ParsingContext;
+import com.univocity.parsers.common.processor.AbstractRowProcessor;
+import com.univocity.parsers.csv.CsvParser;
+import com.univocity.parsers.csv.CsvParserSettings;
 
 public class UnivocityParser extends AbstractParser {
 

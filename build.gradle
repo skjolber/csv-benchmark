@@ -6,6 +6,13 @@ plugins {
     id 'io.morethan.jmhreport' version '0.8.0' apply false
 }
 
+ext {
+	sesselTjonnaVersion = '1.0.7'
+	simpleFlatMapperVersion = '6.4.0'
+	univocityVersion = '2.8.1'
+
+}
+
 subprojects {
     apply plugin: 'java'
     apply plugin: 'com.github.ben-manes.versions'

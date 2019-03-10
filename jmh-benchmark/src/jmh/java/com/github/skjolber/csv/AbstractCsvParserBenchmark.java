@@ -9,11 +9,6 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.infra.Blackhole;
 import org.simpleflatmapper.csv.CsvParser;
 
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.MappingIterator;
-import com.fasterxml.jackson.databind.ObjectReader;
-import com.fasterxml.jackson.dataformat.csv.CsvMapper;
-import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.github.skjolber.csv.param.CsvParam;
 import com.univocity.parsers.common.ParsingContext;
 import com.univocity.parsers.common.processor.BeanProcessor;
@@ -26,25 +21,8 @@ public abstract class AbstractCsvParserBenchmark<T> {
 	
 	protected CsvParser.DSL dsl;
 	protected CsvParser.MapToDSL<T> mapToDSL;
-
-	protected CsvMapper csvMapperToStringArray;
-	protected ObjectReader cityReader;
 	
 	protected DataFile dataFile;
-    
-    @Setup
-    public void setupJackson() {
-        csvMapperToStringArray = new CsvMapper();
-        csvMapperToStringArray.enable(com.fasterxml.jackson.dataformat.csv.CsvParser.Feature.WRAP_AS_ARRAY);
-
-        CsvMapper csvMapperToCity = new CsvMapper();
-
-        csvMapperToCity.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
-
-        CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();
-
-        cityReader = csvMapperToCity.readerFor(dataFile.getCls()).with(bootstrapSchema);
-    }    
     
     @Setup
     public void setupSimpleFlatMapper() {
@@ -127,17 +105,6 @@ public abstract class AbstractCsvParserBenchmark<T> {
         com.univocity.parsers.csv.CsvParser parser = new com.univocity.parsers.csv.CsvParser(settings);
         try(Reader reader = getReader(csvParam)) {
             parser.parse(reader);
-        }
-    }
-    
-    //@Benchmark
-    public void jackson(Blackhole blackhole, CsvParam csvParam) throws IOException {
-        try(Reader reader = getReader(csvParam)) {
-            MappingIterator<City> iterator = cityReader.readValues(reader);
-
-            while (iterator.hasNext()) {
-                blackhole.consume(iterator.next());
-            }
         }
     }
 

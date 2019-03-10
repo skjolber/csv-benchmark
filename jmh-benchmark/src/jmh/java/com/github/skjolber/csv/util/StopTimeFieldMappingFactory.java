@@ -21,9 +21,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.beanutils.ConversionException;
-import org.apache.commons.beanutils.Converter;
-
 public class StopTimeFieldMappingFactory {
 
   private static DecimalFormat _format = new DecimalFormat("00");

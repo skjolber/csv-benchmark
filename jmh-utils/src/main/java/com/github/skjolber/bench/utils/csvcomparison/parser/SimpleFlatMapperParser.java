@@ -2,7 +2,9 @@ package com.github.skjolber.bench.utils.csvcomparison.parser;
 
 
 import java.io.Reader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.simpleflatmapper.csv.CsvParser;
 

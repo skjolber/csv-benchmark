@@ -15,9 +15,8 @@
  ******************************************************************************/
 package com.github.skjolber.bench.utils.csvcomparison.parser;
 
-import java.io.*;
-import java.nio.charset.*;
-import java.util.*;
+import java.io.Reader;
+import java.util.List;
 
 public abstract class AbstractParser {
 
