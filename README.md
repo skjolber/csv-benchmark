@@ -85,6 +85,7 @@ Alternative benchmarks
  
 # History
 
+ - 1.0.1: Bumped versions, refreshed results.
  - 1.0.0: Initial version
 
 [Apache 2.0]:          		http://www.apache.org/licenses/LICENSE-2.0.html

@@ -9,7 +9,6 @@ import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 
 import com.github.skjolber.csv.AbstractStopTimeCsvParserBenchmark;
-import com.github.skjolber.csv.AbstractTripCsvParserBenchmark;
 import com.github.skjolber.csv.DataFile;
 
 @State(Scope.Benchmark)

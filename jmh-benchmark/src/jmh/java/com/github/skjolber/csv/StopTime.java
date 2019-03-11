@@ -17,7 +17,6 @@
 package com.github.skjolber.csv;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class StopTime implements Serializable, Comparable<StopTime> {
 

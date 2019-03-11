@@ -1,18 +1,17 @@
 [
     {
         "jmhVersion" : "1.21",
-        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsTrips.sesseltjonnaCsv",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsStopTime.sesseltjonnaCsv",
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -23,28 +22,181 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 255.241079,
+            "score" : 473.269934,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 255.241079,
-                "50.0" : 255.241079,
-                "90.0" : 255.241079,
-                "95.0" : 255.241079,
-                "99.0" : 255.241079,
-                "99.9" : 255.241079,
-                "99.99" : 255.241079,
-                "99.999" : 255.241079,
-                "99.9999" : 255.241079,
-                "100.0" : 255.241079
+                "0.0" : 473.269934,
+                "50.0" : 473.269934,
+                "90.0" : 473.269934,
+                "95.0" : 473.269934,
+                "99.0" : 473.269934,
+                "99.9" : 473.269934,
+                "99.99" : 473.269934,
+                "99.999" : 473.269934,
+                "99.9999" : 473.269934,
+                "100.0" : 473.269934
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    255.241079
+                    473.269934
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsStopTime.simpleFlatMapper",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC"
+        ],
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 514.998788,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 514.998788,
+                "50.0" : 514.998788,
+                "90.0" : 514.998788,
+                "95.0" : 514.998788,
+                "99.0" : 514.998788,
+                "99.9" : 514.998788,
+                "99.99" : 514.998788,
+                "99.999" : 514.998788,
+                "99.9999" : 514.998788,
+                "100.0" : 514.998788
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    514.998788
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsStopTime.univocity",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC"
+        ],
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 615.698831,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 615.698831,
+                "50.0" : 615.698831,
+                "90.0" : 615.698831,
+                "95.0" : 615.698831,
+                "99.0" : 615.698831,
+                "99.9" : 615.698831,
+                "99.99" : 615.698831,
+                "99.999" : 615.698831,
+                "99.9999" : 615.698831,
+                "100.0" : 615.698831
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    615.698831
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "com.github.skjolber.csv.singleshot.SingleShotGtfsTrips.sesseltjonnaCsv",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
+        "jvmArgs" : [
+            "-XX:+UseG1GC"
+        ],
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "nbRows" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 302.450321,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 302.450321,
+                "50.0" : 302.450321,
+                "90.0" : 302.450321,
+                "95.0" : 302.450321,
+                "99.0" : 302.450321,
+                "99.9" : 302.450321,
+                "99.99" : 302.450321,
+                "99.999" : 302.450321,
+                "99.9999" : 302.450321,
+                "100.0" : 302.450321
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    302.450321
                 ]
             ]
         },
@@ -57,14 +209,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -75,28 +226,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 680.35612,
+            "score" : 417.118965,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 680.35612,
-                "50.0" : 680.35612,
-                "90.0" : 680.35612,
-                "95.0" : 680.35612,
-                "99.0" : 680.35612,
-                "99.9" : 680.35612,
-                "99.99" : 680.35612,
-                "99.999" : 680.35612,
-                "99.9999" : 680.35612,
-                "100.0" : 680.35612
+                "0.0" : 417.118965,
+                "50.0" : 417.118965,
+                "90.0" : 417.118965,
+                "95.0" : 417.118965,
+                "99.0" : 417.118965,
+                "99.9" : 417.118965,
+                "99.99" : 417.118965,
+                "99.999" : 417.118965,
+                "99.9999" : 417.118965,
+                "100.0" : 417.118965
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    680.35612
+                    417.118965
                 ]
             ]
         },
@@ -109,14 +260,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -127,28 +277,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 483.723057,
+            "score" : 624.553083,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 483.723057,
-                "50.0" : 483.723057,
-                "90.0" : 483.723057,
-                "95.0" : 483.723057,
-                "99.0" : 483.723057,
-                "99.9" : 483.723057,
-                "99.99" : 483.723057,
-                "99.999" : 483.723057,
-                "99.9999" : 483.723057,
-                "100.0" : 483.723057
+                "0.0" : 624.553083,
+                "50.0" : 624.553083,
+                "90.0" : 624.553083,
+                "95.0" : 624.553083,
+                "99.0" : 624.553083,
+                "99.9" : 624.553083,
+                "99.99" : 624.553083,
+                "99.999" : 624.553083,
+                "99.9999" : 624.553083,
+                "100.0" : 624.553083
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    483.723057
+                    624.553083
                 ]
             ]
         },
@@ -161,14 +311,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -179,28 +328,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 407.870802,
+            "score" : 397.056023,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 407.870802,
-                "50.0" : 407.870802,
-                "90.0" : 407.870802,
-                "95.0" : 407.870802,
-                "99.0" : 407.870802,
-                "99.9" : 407.870802,
-                "99.99" : 407.870802,
-                "99.999" : 407.870802,
-                "99.9999" : 407.870802,
-                "100.0" : 407.870802
+                "0.0" : 397.056023,
+                "50.0" : 397.056023,
+                "90.0" : 397.056023,
+                "95.0" : 397.056023,
+                "99.0" : 397.056023,
+                "99.9" : 397.056023,
+                "99.99" : 397.056023,
+                "99.999" : 397.056023,
+                "99.9999" : 397.056023,
+                "100.0" : 397.056023
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    407.870802
+                    397.056023
                 ]
             ]
         },
@@ -213,14 +362,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -231,28 +379,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 536.49863,
+            "score" : 467.587642,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 536.49863,
-                "50.0" : 536.49863,
-                "90.0" : 536.49863,
-                "95.0" : 536.49863,
-                "99.0" : 536.49863,
-                "99.9" : 536.49863,
-                "99.99" : 536.49863,
-                "99.999" : 536.49863,
-                "99.9999" : 536.49863,
-                "100.0" : 536.49863
+                "0.0" : 467.587642,
+                "50.0" : 467.587642,
+                "90.0" : 467.587642,
+                "95.0" : 467.587642,
+                "99.0" : 467.587642,
+                "99.9" : 467.587642,
+                "99.99" : 467.587642,
+                "99.999" : 467.587642,
+                "99.9999" : 467.587642,
+                "100.0" : 467.587642
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    536.49863
+                    467.587642
                 ]
             ]
         },
@@ -265,14 +413,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -283,28 +430,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 596.729988,
+            "score" : 913.663155,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 596.729988,
-                "50.0" : 596.729988,
-                "90.0" : 596.729988,
-                "95.0" : 596.729988,
-                "99.0" : 596.729988,
-                "99.9" : 596.729988,
-                "99.99" : 596.729988,
-                "99.999" : 596.729988,
-                "99.9999" : 596.729988,
-                "100.0" : 596.729988
+                "0.0" : 913.663155,
+                "50.0" : 913.663155,
+                "90.0" : 913.663155,
+                "95.0" : 913.663155,
+                "99.0" : 913.663155,
+                "99.9" : 913.663155,
+                "99.99" : 913.663155,
+                "99.999" : 913.663155,
+                "99.9999" : 913.663155,
+                "100.0" : 913.663155
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    596.729988
+                    913.663155
                 ]
             ]
         },
@@ -317,14 +464,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -335,28 +481,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 504.816326,
+            "score" : 496.757191,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 504.816326,
-                "50.0" : 504.816326,
-                "90.0" : 504.816326,
-                "95.0" : 504.816326,
-                "99.0" : 504.816326,
-                "99.9" : 504.816326,
-                "99.99" : 504.816326,
-                "99.999" : 504.816326,
-                "99.9999" : 504.816326,
-                "100.0" : 504.816326
+                "0.0" : 496.757191,
+                "50.0" : 496.757191,
+                "90.0" : 496.757191,
+                "95.0" : 496.757191,
+                "99.0" : 496.757191,
+                "99.9" : 496.757191,
+                "99.99" : 496.757191,
+                "99.999" : 496.757191,
+                "99.9999" : 496.757191,
+                "100.0" : 496.757191
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    504.816326
+                    496.757191
                 ]
             ]
         },
@@ -369,14 +515,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -387,28 +532,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 635.233913,
+            "score" : 627.682717,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 635.233913,
-                "50.0" : 635.233913,
-                "90.0" : 635.233913,
-                "95.0" : 635.233913,
-                "99.0" : 635.233913,
-                "99.9" : 635.233913,
-                "99.99" : 635.233913,
-                "99.999" : 635.233913,
-                "99.9999" : 635.233913,
-                "100.0" : 635.233913
+                "0.0" : 627.682717,
+                "50.0" : 627.682717,
+                "90.0" : 627.682717,
+                "95.0" : 627.682717,
+                "99.0" : 627.682717,
+                "99.9" : 627.682717,
+                "99.99" : 627.682717,
+                "99.999" : 627.682717,
+                "99.9999" : 627.682717,
+                "100.0" : 627.682717
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    635.233913
+                    627.682717
                 ]
             ]
         },
@@ -421,14 +566,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -439,28 +583,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 968.204926,
+            "score" : 1071.624825,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 968.204926,
-                "50.0" : 968.204926,
-                "90.0" : 968.204926,
-                "95.0" : 968.204926,
-                "99.0" : 968.204926,
-                "99.9" : 968.204926,
-                "99.99" : 968.204926,
-                "99.999" : 968.204926,
-                "99.9999" : 968.204926,
-                "100.0" : 968.204926
+                "0.0" : 1071.624825,
+                "50.0" : 1071.624825,
+                "90.0" : 1071.624825,
+                "95.0" : 1071.624825,
+                "99.0" : 1071.624825,
+                "99.9" : 1071.624825,
+                "99.99" : 1071.624825,
+                "99.999" : 1071.624825,
+                "99.9999" : 1071.624825,
+                "100.0" : 1071.624825
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    968.204926
+                    1071.624825
                 ]
             ]
         },
@@ -473,14 +617,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -491,28 +634,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 534.25675,
+            "score" : 719.570514,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 534.25675,
-                "50.0" : 534.25675,
-                "90.0" : 534.25675,
-                "95.0" : 534.25675,
-                "99.0" : 534.25675,
-                "99.9" : 534.25675,
-                "99.99" : 534.25675,
-                "99.999" : 534.25675,
-                "99.9999" : 534.25675,
-                "100.0" : 534.25675
+                "0.0" : 719.570514,
+                "50.0" : 719.570514,
+                "90.0" : 719.570514,
+                "95.0" : 719.570514,
+                "99.0" : 719.570514,
+                "99.9" : 719.570514,
+                "99.99" : 719.570514,
+                "99.999" : 719.570514,
+                "99.9999" : 719.570514,
+                "100.0" : 719.570514
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    534.25675
+                    719.570514
                 ]
             ]
         },
@@ -525,14 +668,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -543,28 +685,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 643.657784,
+            "score" : 727.98383,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 643.657784,
-                "50.0" : 643.657784,
-                "90.0" : 643.657784,
-                "95.0" : 643.657784,
-                "99.0" : 643.657784,
-                "99.9" : 643.657784,
-                "99.99" : 643.657784,
-                "99.999" : 643.657784,
-                "99.9999" : 643.657784,
-                "100.0" : 643.657784
+                "0.0" : 727.98383,
+                "50.0" : 727.98383,
+                "90.0" : 727.98383,
+                "95.0" : 727.98383,
+                "99.0" : 727.98383,
+                "99.9" : 727.98383,
+                "99.99" : 727.98383,
+                "99.999" : 727.98383,
+                "99.9999" : 727.98383,
+                "100.0" : 727.98383
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    643.657784
+                    727.98383
                 ]
             ]
         },
@@ -577,14 +719,13 @@
         "mode" : "ss",
         "threads" : 1,
         "forks" : 1,
-        "jvm" : "/usr/java/jdk1.8.0_172/jre/bin/java",
+        "jvm" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-2.fc29.x86_64/jre/bin/java",
         "jvmArgs" : [
-            "-XX:+UseG1GC",
-            "-Xverify:none"
+            "-XX:+UseG1GC"
         ],
-        "jdkVersion" : "1.8.0_172",
-        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
-        "vmVersion" : "25.172-b11",
+        "jdkVersion" : "1.8.0_201",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.201-b09",
         "warmupIterations" : 0,
         "warmupTime" : "single-shot",
         "warmupBatchSize" : 1,
@@ -595,28 +736,28 @@
             "nbRows" : "1000000"
         },
         "primaryMetric" : {
-            "score" : 1034.03982,
+            "score" : 1214.155512,
             "scoreError" : "NaN",
             "scoreConfidence" : [
                 "NaN",
                 "NaN"
             ],
             "scorePercentiles" : {
-                "0.0" : 1034.03982,
-                "50.0" : 1034.03982,
-                "90.0" : 1034.03982,
-                "95.0" : 1034.03982,
-                "99.0" : 1034.03982,
-                "99.9" : 1034.03982,
-                "99.99" : 1034.03982,
-                "99.999" : 1034.03982,
-                "99.9999" : 1034.03982,
-                "100.0" : 1034.03982
+                "0.0" : 1214.155512,
+                "50.0" : 1214.155512,
+                "90.0" : 1214.155512,
+                "95.0" : 1214.155512,
+                "99.0" : 1214.155512,
+                "99.9" : 1214.155512,
+                "99.99" : 1214.155512,
+                "99.999" : 1214.155512,
+                "99.9999" : 1214.155512,
+                "100.0" : 1214.155512
             },
             "scoreUnit" : "ms/op",
             "rawData" : [
                 [
-                    1034.03982
+                    1214.155512
                 ]
             ]
         },

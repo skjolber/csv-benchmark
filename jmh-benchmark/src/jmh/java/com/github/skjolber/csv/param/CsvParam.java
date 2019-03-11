@@ -41,8 +41,9 @@ public class CsvParam {
 	//@Param(value={"1", "10","1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
 	// @Param(value={"1", "10","100", "250", "500", "1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
 	//@Param(value={"1", "10","100", "250", "500", "1000", "2500", "5000", "10000", "25000", "50000", "100000", "250000", "500000", "1000000"})
-	//@Param(value={"10000", "25000", "50000", "100000", "250000", "500000", "1000000"}) 
-	@Param(value={"10000"})
+	@Param(value={"10000", "25000", "50000", "100000", "250000", "500000", "1000000"}) 
+	//@Param(value={"1000000"})
+	//@Param(value={"1000000"}) 
 	public int nbRows = 1;
 
 	public ExecutorService executorService;
@@ -52,12 +53,10 @@ public class CsvParam {
 
 	@Setup
 	public void setUp() throws IOException {
-
 		for (DataFile dataFile : DataFile.values()) {
-			File inputFile = dataFile.getInputFile();
 			File outputFile = dataFile.getOutputFile(nbRows);
-			if(!outputFile.exists()) {
-				rewriteFile(nbRows, outputFile, inputFile, dataFile.getCharset(), dataFile.isQuotes() ? CsvParam::getQuotesRewriter : CsvParam::getRewriter);
+			if(!outputFile.exists() || outputFile.length() == 0) {
+				rewriteFile(nbRows, outputFile, dataFile, dataFile.getCharset(), dataFile.isQuotes() ? CsvParam::getQuotesRewriter : CsvParam::getRewriter);
 			}
 			
 			FileInputStream in = new FileInputStream(outputFile);
@@ -93,7 +92,7 @@ public class CsvParam {
 		return new ByteArrayInputStream(bytes.get(input.getOutputFile(nbRows)));
 	}
 
-	private static void rewriteFile(int nbRows, File file, File fileZip, Charset charset, Function<Writer, CheckedConsumer<String[]>> rewriterFunction) throws IOException {
+	private static void rewriteFile(int nbRows, File file, DataFile dataFile, Charset charset, Function<Writer, CheckedConsumer<String[]>> rewriterFunction) throws IOException {
 		try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
 				Writer writer = new OutputStreamWriter(bos, "UTF-8")) {
 
@@ -102,7 +101,7 @@ public class CsvParam {
 			CheckedConsumerWithCounter checkedConsumerWithCounter = new CheckedConsumerWithCounter(rewriter);
 			
 			while(checkedConsumerWithCounter.getCount() < nbRows) {
-				ZipInputStream zis = new ZipInputStream(new FileInputStream(fileZip));
+				ZipInputStream zis = new ZipInputStream(dataFile.getInputStream());
 				ZipEntry zipEntry = zis.getNextEntry();
 				while(zipEntry != null){
 					BufferedInputStream bis = new BufferedInputStream(zis);
@@ -113,13 +112,17 @@ public class CsvParam {
 					if(checkedConsumerWithCounter.getCount() > 0) {
 						reader.skipRows(1);
 					}
-					reader.read(checkedConsumerWithCounter, nbRows - checkedConsumerWithCounter.getCount());
+					
+					int count = nbRows - checkedConsumerWithCounter.getCount();
+					System.out.println(file.getName() + " write " + count + " rows");
+					reader.read(checkedConsumerWithCounter, count);
 					
 					zipEntry = zis.getNextEntry();
 				}
 				zis.closeEntry();
 				zis.close();
 			}
+			System.out.println("Wrote " + checkedConsumerWithCounter.getCount() + " rows");
 		}
 	}
 	

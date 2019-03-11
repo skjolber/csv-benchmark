@@ -1,6 +1,7 @@
 package com.github.skjolber.csv;
 
 import java.io.File;
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 public enum DataFile {
@@ -36,10 +37,10 @@ public enum DataFile {
 		return (Class<T>) cls;
 	}
 	
-	public File getInputFile() {
-		return new File("jmh-benchmark/src/jmh/resources/" + inputFile);
+	public InputStream getInputStream() {
+		return getClass().getResourceAsStream("/" + inputFile);
 	}
-	
+
 	public boolean isQuotes() {
 		return quotes;
 	}

@@ -43,9 +43,11 @@ configure(project(':jmh-benchmark')) {
     jmh {
         resultFormat = 'JSON'
         
+        forceGC = true
+        
         fork = 1
         
-        jvmArgs = ['-XX:+UseG1GC', '-Xverify:none']
+        jvmArgs = ['-XX:+UseG1GC'] //, '-Xverify:none']
     }
     
     jmhReport {

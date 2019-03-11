@@ -17,7 +17,6 @@
 package com.github.skjolber.csv.util;
 
 import java.text.DecimalFormat;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -2,7 +2,6 @@ package com.github.skjolber.csv;
 
 import org.openjdk.jmh.annotations.Setup;
 
-import com.github.skjolber.csv.util.StopTimeFieldMappingFactory;
 import com.github.skjolber.stcsv.CsvMapper;
 
 public abstract class AbstractStopTimeCsvParserBenchmark extends AbstractCsvParserBenchmark<StopTime> {

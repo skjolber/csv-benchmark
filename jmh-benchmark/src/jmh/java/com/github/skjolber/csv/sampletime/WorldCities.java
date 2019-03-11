@@ -17,8 +17,8 @@ import com.github.skjolber.csv.DataFile;
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.SampleTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 1, batchSize=1)
-@Measurement(time=20, timeUnit=TimeUnit.SECONDS,iterations=1)
+@Warmup(time=SampleTimeBenchmark.warmupTimeInSeconds, timeUnit=TimeUnit.SECONDS,iterations=1)
+@Measurement(time=SampleTimeBenchmark.measurementTimeInSeconds, timeUnit=TimeUnit.SECONDS,iterations=1)
 @Timeout(timeUnit=TimeUnit.MINUTES, time=60)
 public class WorldCities extends AbstractCityCsvParserBenchmark {
 	
