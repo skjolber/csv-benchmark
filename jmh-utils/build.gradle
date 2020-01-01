@@ -4,6 +4,6 @@ dependencies {
 	compile "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
 	compile "com.univocity:univocity-parsers:${univocityVersion}"
 	compile "org.simpleflatmapper:sfm-csv:${simpleFlatMapperVersion}"
-	compile "com.github.skjolber.sesseltjonna-csv:sesseltjonna-csv:${sesselTjonnaVersion}"
+	compile "com.github.skjolber.sesseltjonna-csv:databinder:${sesselTjonnaVersion}"
 }
 
