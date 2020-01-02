@@ -5,8 +5,6 @@ Project for benchmarking high-performance open source CSV parsers using [JMH].
   * [univocity-parsers]
   * [sesseltjonna-csv]
 
-Both databinding and raw String parsing is tested.
-
 Bugs, feature suggestions and help requests can be filed with the [issue-tracker].
 
 ## License
@@ -43,12 +41,14 @@ Open the file `./jmh-benchmark/build/reports/jmh/index.html` to view a visualiza
 Inputs:
   * World cities
   * GTFS Trips
+  * GTFS StopTimes
    
 Modes:
 
   * plain or quoted
-  * rows from 1 to 1 million
+  * rows in intervals from 1 to 1 million
   * single-shot and sample time
+  * databinding or raw String parsing
 
 # Results
 From using JDK 8 build 232.
