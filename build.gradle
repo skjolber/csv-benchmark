@@ -7,7 +7,7 @@ plugins {
 }
 
 ext {
-    sesselTjonnaVersion = '1.0.19'
+    sesselTjonnaVersion = '1.0.20'
     simpleFlatMapperVersion = '8.2.1'
     univocityVersion = '2.8.4'
 }
