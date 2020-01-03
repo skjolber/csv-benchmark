@@ -1,16 +1,19 @@
 plugins {
-    id 'me.champeau.gradle.jmh' version '0.4.8' apply false
-    id 'com.github.ben-manes.versions' version '0.20.0' apply false
-    id 'org.owasp.dependencycheck' version '4.0.2' apply false
-    id 'com.github.spotbugs' version '1.6.10' apply false    
+    id 'me.champeau.gradle.jmh' version '0.5.0' apply false
+    id 'com.github.ben-manes.versions' version '0.27.0' apply false
+    id 'org.owasp.dependencycheck' version '5.2.4' apply false
+    id 'com.github.spotbugs' version '3.0.0' apply false    
     id 'io.morethan.jmhreport' version '0.9.0' apply false
 }
 
 ext {
-	sesselTjonnaVersion = '1.0.8-SNAPSHOT'
-	simpleFlatMapperVersion = '6.4.0'
-	univocityVersion = '2.8.1'
+    sesselTjonnaVersion = '1.0.20'
+    simpleFlatMapperVersion = '8.2.1'
+    univocityVersion = '2.8.4'
+}
 
+def benchmarkProjects() {
+    subprojects.findAll { it.name.endsWith("-benchmark")  }
 }
 
 subprojects {
@@ -28,15 +31,15 @@ subprojects {
         jcenter()
     }
 
-	tasks.withType(com.github.spotbugs.SpotBugsTask) {
-	  reports {
-	    xml.enabled false
-	    html.enabled true
-	  }
-	}
+    tasks.withType(com.github.spotbugs.SpotBugsTask) {
+      reports {
+        xml.enabled false
+        html.enabled true
+      }
+    }
 }
 
-configure(project(':jmh-benchmark')) {
+configure(benchmarkProjects()) {
     apply plugin: 'io.morethan.jmhreport'
     apply plugin: 'me.champeau.gradle.jmh'
 
@@ -48,6 +51,8 @@ configure(project(':jmh-benchmark')) {
         fork = 1
         
         jvmArgs = ['-XX:+UseG1GC'] //, '-Xverify:none']
+
+        duplicateClassesStrategy = 'warn'
     }
     
     jmhReport {
@@ -56,11 +61,10 @@ configure(project(':jmh-benchmark')) {
     }
     
     tasks.jmh.finalizedBy tasks.jmhReport
-    
-	configurations.all {
-	    // Check for updates every build
-	    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-	}    
+    configurations.all {
+        // Check for updates every build
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }    
 }
 
 allprojects {
@@ -82,11 +86,11 @@ allprojects {
         }
     }
 
-	repositories {
-	    mavenLocal()
-	    mavenCentral()
-	    jcenter()
-	    maven { url "http://repo.spring.io/plugins-release/" }
-	    
-	}
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        maven { url "http://repo.spring.io/plugins-release/" }
+        
+    }
 }

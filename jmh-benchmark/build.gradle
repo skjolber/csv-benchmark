@@ -1,10 +1,11 @@
 jmh {
-    //include = ".+singleshot.*"
-    include = ".+sampletime.*"
+    include = ".+singleshot.*"
+    //include = ".+sampletime.*"
     //include = ".+StopTime.*"
+    //include = ".*"    
 }
 
 dependencies {
-    jmh project(":jmh-utils")    
+    jmh project(":jmh-utils")
 }
 
