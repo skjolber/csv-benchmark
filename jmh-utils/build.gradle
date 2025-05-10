@@ -1,9 +1,9 @@
 dependencies {
 
-	compile "commons-io:commons-io:2.6"
-	compile "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
-	compile "com.univocity:univocity-parsers:${univocityVersion}"
-	compile "org.simpleflatmapper:sfm-csv:${simpleFlatMapperVersion}"
-	compile "com.github.skjolber.sesseltjonna-csv:databinder:${sesselTjonnaVersion}"
+	implementation "commons-io:commons-io:2.19.0"
+	implementation "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
+	implementation "com.univocity:univocity-parsers:${univocityVersion}"
+	implementation "org.simpleflatmapper:sfm-csv:${simpleFlatMapperVersion}"
+	implementation "com.github.skjolber.sesseltjonna-csv:databinder:${sesselTjonnaVersion}"
 }
 

@@ -87,6 +87,7 @@ Alternative benchmarks
  
 # History
 
+ - 1.0.3: Bump dependencies and rerun on modern (Zen 5) hardware / software (Fedora 42)
  - 1.0.2: Added String-array benchmarks, made single-shot benchmarks do most of the classloading.
  - 1.0.1: Bumped versions, refreshed results.
  - 1.0.0: Initial version

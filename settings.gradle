@@ -1,1 +1,1 @@
-include 'jmh-utils', 'jmh-benchmark'
+include 'jmh-benchmark'

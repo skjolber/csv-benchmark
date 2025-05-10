@@ -1,4 +1,4 @@
-package com.github.skjolber.bench.utils.csvcomparison.parser;
+package parser;
 
 
 import java.io.Reader;

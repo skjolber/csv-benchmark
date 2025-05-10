@@ -1,11 +1,16 @@
 jmh {
-    include = ".+singleshot.*"
-    //include = ".+sampletime.*"
-    //include = ".+StopTime.*"
-    //include = ".*"    
+
+    //includes = [".+singleshot.*"]
+    //includes = [".+sampletime.*"]
+    //includes = [".+StopTime.*"]
+    includes = [".*"]
 }
 
 dependencies {
-    jmh project(":jmh-utils")
+    jmh "commons-io:commons-io:2.19.0"
+    jmh "org.simpleflatmapper:lightning-csv:${simpleFlatMapperVersion}"
+    jmh "com.univocity:univocity-parsers:${univocityVersion}"
+    jmh "org.simpleflatmapper:sfm-csv:${simpleFlatMapperVersion}"
+    jmh "com.github.skjolber.sesseltjonna-csv:databinder:${sesselTjonnaVersion}"
 }
 

@@ -1,15 +1,14 @@
+
 plugins {
-    id 'me.champeau.gradle.jmh' version '0.5.0' apply false
-    id 'com.github.ben-manes.versions' version '0.27.0' apply false
-    id 'org.owasp.dependencycheck' version '5.2.4' apply false
-    id 'com.github.spotbugs' version '3.0.0' apply false    
-    id 'io.morethan.jmhreport' version '0.9.0' apply false
+    id 'me.champeau.jmh' version "0.7.3" apply false
+    id 'com.github.ben-manes.versions' version '0.52.0' apply false
+    id 'io.morethan.jmhreport' version '0.9.6' apply false
 }
 
 ext {
-    sesselTjonnaVersion = '1.0.20'
-    simpleFlatMapperVersion = '8.2.1'
-    univocityVersion = '2.8.4'
+    sesselTjonnaVersion = '1.0.25'
+    simpleFlatMapperVersion = '9.0.2'
+    univocityVersion = '2.9.1'
 }
 
 def benchmarkProjects() {
@@ -19,29 +18,27 @@ def benchmarkProjects() {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'com.github.ben-manes.versions'
-    apply plugin: 'org.owasp.dependencycheck'
-    apply plugin: 'com.github.spotbugs'
-    apply plugin: 'maven'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 21
+    targetCompatibility = 21
     
     repositories {
         mavenLocal()
-        jcenter()
+        mavenCentral()
     }
 
-    tasks.withType(com.github.spotbugs.SpotBugsTask) {
-      reports {
-        xml.enabled false
-        html.enabled true
-      }
-    }
 }
+
 
 configure(benchmarkProjects()) {
     apply plugin: 'io.morethan.jmhreport'
-    apply plugin: 'me.champeau.gradle.jmh'
+    apply plugin: 'me.champeau.jmh'
+
+    // fix obscure error
+    task copyWoff2(type: Copy) {
+        from 'src/jmh/resources/448c34a56d699c29117adc64c43affeb.woff2'
+        into 'build/reports/jmh'
+    }
 
     jmh {
         resultFormat = 'JSON'
@@ -54,13 +51,15 @@ configure(benchmarkProjects()) {
 
         duplicateClassesStrategy = 'warn'
     }
-    
+
     jmhReport {
-        jmhResultPath = project.file("build/reports/jmh/results.json")
+        jmhResultPath = project.file("build/results/jmh/results.json")
         jmhReportOutput = project.file("build/reports/jmh")
+
     }
     
     tasks.jmh.finalizedBy tasks.jmhReport
+    tasks.jmhReport.dependsOn(tasks.getByName("copyWoff2"))
     configurations.all {
         // Check for updates every build
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
@@ -87,10 +86,7 @@ allprojects {
     }
 
     repositories {
-        mavenLocal()
         mavenCentral()
-        jcenter()
-        maven { url "http://repo.spring.io/plugins-release/" }
-        
+        gradlePluginPortal()
     }
 }
